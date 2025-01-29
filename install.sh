@@ -15,3 +15,4 @@ chmod +x "${HOME}/.shortcuts/youtubeVideo.sh"
 cp -r "${HOME}/dotfiles-termux/starship" "${HOME}/.config"
 cp "${HOME}/dotfiles-termux/.bashrc" "${HOME}"
 termux-toast "Configuration Completed"
+exit
