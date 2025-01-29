@@ -24,7 +24,6 @@ dot_bashrc="${HOME}/dotfiles-termux/.bashrc"
 [ ! -d "$shortcuts"] && mkdir "$shortcuts"
 [ ! -d "$starship"] && mkdir "$starship"
 
-
 echo "Next copy and move file"
 
 cp -r "$dot_aria2" "${HOME}"
