@@ -1,0 +1,116 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+continuation_prompt = "[▸▹ ](dimmed white)"
+
+format = """
+[╭](fg:#839495)\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$git_state\
+$fill\
+$python\
+$lua\
+$rust\
+$nodejs\
+$golang\
+$time\
+$memory_usage\
+\n$character"""
+
+[memory_usage]
+disabled = false 
+format = '[${ram}( | ${swap})]($style)'
+style = 'bold dimmed white'
+threshold = 70 
+
+[os]
+format = '[─](fg:#839495)[$symbol]($style)'
+style = '#278bd3 bold'
+disabled = false
+
+[os.symbols]
+Arch = ' '
+
+[directory]
+home_symbol = " "
+style = "fg:#859900"
+format = "[─](fg:#839495)[ $path ]($style)"
+truncation_symbol = ' '
+truncation_length = 3
+read_only = '󱧵 '
+read_only_style = ''
+
+[fill]
+symbol = '─'
+style = 'bold #839495'
+
+[character]
+success_symbol = "[╰─](fg:#839495)[❯](#859900 bold)"
+error_symbol = "[╰─](fg:#839495)[✗](#dc312e bold)"
+vimcmd_symbol = "[╰─](fg:#839495)[❮](#859900 bold)"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+format = "[─](fg:#839495) on [$symbol$branch ]($style)"
+style = "#ede7d4 bold"
+
+[git_status]
+ahead = '[⇡${count}](lavender) '
+behind = '😰 ${count}'
+conflicted = '🏳'
+deleted = '󰗨 ${count} '
+diverged = '⇕⇡${ahead_count}⇣${behind_count} '
+format = "[[($conflicted$untracked$modified$staged$renamed$deleted)](218)($ahead_behind$stashed)]($style)"
+modified = '[ ${count}](peach) '
+renamed = '👅'
+staged = '[+$count](green) '
+stashed = " ${count} "
+style = "red"
+untracked = "[ ${count}](sapphire) "
+up_to_date = ''
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "#d33682"
+
+# [cmd_duration]
+# format = "[─](fg:#839495)[$duration]($style) "
+# style = "#b38600'"
+
+[python]
+symbol = "󰌠"
+style = "bg:#00141a"
+format = '[─](fg:#839495)[[ $symbol ($version) ](fg:#ede7d4 bold)]($style)'
+
+[lua]
+symbol = "󰢱"
+style = "bg:#00141a"
+format = '[─](fg:#839495)[[ $symbol ($version) ](fg:#ede7d4 bold)]($style)'
+
+[rust]
+symbol = "󱘗"
+style = "bg:#00141a"
+format = '[─](fg:#839495)[[ $symbol ($version) ](fg:#ede7d4 bold)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#00141a"
+format = '[─](fg:#839495)[[ $symbol ($version) ](fg:#ede7d4 bold)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#00141a"
+format = '[─](fg:#839495)[[ $symbol ($version) ](fg:#ede7d4 bold)]($style)'
+
+[time]
+disabled = false 
+time_format = "%R" # Hour:Minute Format
+style = "bg:#278bd3"
+format = '[─](fg:#839495)[[  $time ](fg:#278bd3 bold)]($style)'
