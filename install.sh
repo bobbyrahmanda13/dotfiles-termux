@@ -3,8 +3,8 @@ termux-setup-storage
 pkg update && pkg upgrade -y
 pkg install bat build-essential ripgrep fd unzip renameutils mediainfo termux-api zoxide eza fzf tmux nano aria2 git wget curl nmap libexpat openssl python ffmpeg python-pip python-pillow rust rust-analyzer starship 7zip neovim nodejs-lts -y
 pip install -U "yt-dlp[default]"
-[! -d ".config"] && mkdir ".config"
-[! -d ".shortcuts"] && mkdir ".shortcuts"
+[ ! -d ".config" ] && mkdir ".config"
+[ ! -d ".shortcuts" ] && mkdir ".shortcuts"
 cp -r "${HOME}/dotfiles-termux/.aria2" "${HOME}"
 cp "${HOME}/.aria2/aria2.sh" "${HOME}/.shortcuts"
 chmod +x "${HOME}/.shortcuts/aria2.sh"
