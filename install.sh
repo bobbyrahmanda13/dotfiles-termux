@@ -9,7 +9,6 @@ pip install -U "yt-dlp[default]"
 
 # variable path
 config="${HOME}/.config"
-starship="${HOME}/.config/starship"
 shortcuts="${HOME}/.shortcuts"
 aria2="${HOME}/.aria2/aria2.sh"
 
@@ -17,12 +16,11 @@ aria2="${HOME}/.aria2/aria2.sh"
 dot_aria2="${HOME}/dotfiles-termux/.aria2"
 dot_youtubemp3="${HOME}/dotfiles-termux/youtubemp3/youtubemp3.sh"
 dot_youtubeVideo="${HOME}/dotfiles-termux/youtubeVideo/youtubeVideo.sh"
-dot_starship="${HOME}/dotfiles-termux/starship"
+dot_starship="${HOME}/dotfiles-termux/starship" 
+dot_nvim="${HOME}/dotfiles-termux/nvim" 
 dot_bashrc="${HOME}/dotfiles-termux/.bashrc"
 
-[! -d "$config"] && mkdir "$config"
-[! -d "$shortcuts"] && mkdir "$shortcuts"
-[! -d "$starship"] && mkdir "$starship"
+mkdir "$config" && mkdir "$shortcuts"
 
 echo "Next copy and move file"
 
@@ -36,7 +34,8 @@ chmod +x "$shortcuts/youtubemp3.sh"
 cp "$dot_youtubeVideo" "$shortcuts"
 chmod +x "$shortcuts/youtubeVideo.sh"
 
-cp -r "$dot_starship" "$starship"
+cp -r "$dot_starship" "$config"
+cp -r "$dot_nvim" "$config"
 cp "$dot_bashrc" "${HOME}"
 
 echo "Configuration Completed"
