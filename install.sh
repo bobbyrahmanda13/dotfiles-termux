@@ -20,9 +20,9 @@ dot_youtubeVideo="${HOME}/dotfiles-termux/youtubeVideo/youtubeVideo.sh"
 dot_starship="${HOME}/dotfiles-termux/starship"
 dot_bashrc="${HOME}/dotfiles-termux/.bashrc"
 
-[ ! -d "$config"] && mkdir "$config"
-[ ! -d "$shortcuts"] && mkdir "$shortcuts"
-[ ! -d "$starship"] && mkdir "$starship"
+[! -d "$config"] && mkdir "$config"
+[! -d "$shortcuts"] && mkdir "$shortcuts"
+[! -d "$starship"] && mkdir "$starship"
 
 echo "Next copy and move file"
 
