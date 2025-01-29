@@ -20,22 +20,22 @@ dot_starship="${HOME}/dotfiles-termux/starship"
 dot_nvim="${HOME}/dotfiles-termux/nvim" 
 dot_bashrc="${HOME}/dotfiles-termux/.bashrc"
 
-mkdir "$config" && mkdir "$shortcuts"
+mkdir $config && mkdir $shortcuts
 
 echo "Next copy and move file"
 
-cp -r "$dot_aria2" "${HOME}"
-cp "$aria2" "$shortcuts"
+cp -r $dot_aria2 "${HOME}"
+cp $aria2 $shortcuts
 chmod +x "$shortcuts/aria2.sh"
 
-cp "$dot_youtubemp3" "$shortcuts"
+cp $dot_youtubemp3 $shortcuts
 chmod +x "$shortcuts/youtubemp3.sh"
 
-cp "$dot_youtubeVideo" "$shortcuts"
+cp $dot_youtubeVideo $shortcuts
 chmod +x "$shortcuts/youtubeVideo.sh"
 
-cp -r "$dot_starship" "$config"
-cp -r "$dot_nvim" "$config"
-cp "$dot_bashrc" "${HOME}"
+cp -r $dot_starship $config
+cp -r $dot_nvim $config
+cp $dot_bashrc "${HOME}"
 
 echo "Configuration Completed"
