@@ -1,7 +1,7 @@
 termux-change-repo
 termux-setup-storage
 pkg update && pkg upgrade -y
-pkg install build-essential ripgrep fd unzip renameutils mediainfo termux-api zoxide eza fzf tmux nano aria2 git wget curl nmap libexpat openssl python ffmpeg python-pip python-pillow rust rust-analyzer starship 7zip neovim nodejs-lts 
+pkg install build-essential ripgrep fd unzip renameutils mediainfo termux-api zoxide eza fzf tmux nano aria2 git wget curl nmap libexpat openssl python ffmpeg python-pip python-pillow rust rust-analyzer starship 7zip neovim nodejs-lts -y
 pip install -U "yt-dlp[default]"
 [! -d ".config"] && mkdir ".config"
 [! -d ".shortcuts"] && mkdir ".shortcuts"
