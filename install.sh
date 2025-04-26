@@ -35,7 +35,7 @@ cp $dot_youtubeVideo $shortcuts
 chmod +x "$shortcuts/youtubeVideo.sh"
 
 cp -r $dot_starship $config
-cp -r $dot_nvim $config
+# cp -r $dot_nvim $config
 cp $dot_bashrc "${HOME}"
 
 echo "Configuration Completed"
