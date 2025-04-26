@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Package install
+pkg i termux-services -y
 termux-change-repo
 termux-setup-storage
 pkg update -y && pkg upgrade -y
